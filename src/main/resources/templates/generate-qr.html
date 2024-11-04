@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Authenticator Setup</title>
+</head>
+<body>
+<h1>Google Authenticator 설정</h1>
+
+<p>아래 QR 코드를 Google Authenticator 앱에서 스캔하세요:</p>
+<img th:src="${qrUrl}" alt="QR Code" />
+
+<h2>OTP 코드 입력</h2>
+<form action="/validate" method="post">
+    <label for="otpCode">OTP 코드:</label>
+    <input type="text" id="otpCode" name="otpCode" required />
+    <button type="submit">인증</button>
+</form>
+</body>
+</html>

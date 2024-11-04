@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP 인증 결과</title>
+</head>
+<body>
+<h1>OTP 인증 결과</h1>
+
+<p th:if="${isValid}">OTP 코드가 유효합니다!</p>
+<p th:if="${!isValid}">OTP 코드가 유효하지 않습니다. 다시 시도해 주세요.</p>
+
+<a href="/vtest.html">다시 인증하기</a>
+</body>
+</html>
